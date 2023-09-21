@@ -13,7 +13,14 @@ const NavBar = () => {
     
     if(!search) return;
 
-    navigate(`/search?q=${search}`)
+    navigate(`/search?q=${search}`);
+  } 
+
+  const handleGoHome = (e) => {
+    e.preventDefault();
+
+    setSearch('');
+    navigate('/');
   } 
 
   useEffect(() => setSearch(""), [])
@@ -21,9 +28,9 @@ const NavBar = () => {
   return (
     <nav id="navbar">
         <h2>
-            <Link to="/">
+            <a onClick={handleGoHome}>
                 <BiCameraMovie/> MoviesLib
-            </Link>
+            </a>
         </h2>
         <form onSubmit={handleSubmit}>
             <input type="text" 

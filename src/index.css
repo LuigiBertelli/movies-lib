@@ -18,4 +18,5 @@ a {
 
 a:hover {
   color: #b8930c;
+  cursor: pointer;
 }

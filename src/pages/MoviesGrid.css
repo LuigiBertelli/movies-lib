@@ -21,6 +21,12 @@
     width: 30%;
 }
 
+.movies-container::after {
+    content: " ";
+    display: block;
+    width: 30%;
+}
+
 @media screen and (max-width: 650px) {
     .movies-container {
         justify-content: center;
